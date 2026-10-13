@@ -1,0 +1,23 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "this is a sample project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salimzy/expressjs-sample.git"
+  },
+  "keywords": [
+    "expressjs",
+    "javascrtipt"
+  ],
+  "author": "salimzy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salimzy/expressjs-sample/issues"
+  },
+  "homepage": "https://github.com/salimzy/expressjs-sample#readme"
+}
