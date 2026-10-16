@@ -1,23 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var userController = require('../controller/user');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('Got a get request');
-});
+router.route('/')
+  .post(userController.createUser)
+  .get(userController.getUsers);
 
-// app.post('/users', (req: Request, res: Response) => {
-//   res.send('Got a POST request');
-// });
-// app.post('/', (req, res) => {
-//   res.send('Got a POST request');
-// });
+router.route('/:id')
+  .get(userController.getUserById)
+  .put(userController.updateUser)
+  .patch(userController.updateUser)
+  .delete(userController.deleteUser);
 
-// app.delete('/user', (req, res) => {
-//   res.send('Got a DELETE request at /user');
-// });
-
-// app.put('/user', (req, res) => {
-//   res.send('Got a PUT request at /user');
-// });
 module.exports = router;
