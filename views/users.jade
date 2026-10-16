@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	.container
+		h1 Users
+		p Browse the users in your account.
+
+		if users && users.length
+			table.table
+				thead
+					tr
+						th(scope='col') Name
+						th(scope='col') Email
+				tbody
+					each user in users
+						tr
+							td= user.name
+							td= user.email
+		else
+			p No users to display.
